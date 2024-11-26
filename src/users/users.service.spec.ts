@@ -17,16 +17,15 @@ describe('UsersService', () => {
   });
 
   it('should create a user', () => {
-    const user = { id: 1, email: 'testing@hotmail.com' };
+    const user = { id: 1, email: 'test@hotmail.com' };
     expect(service.create(user)).toEqual(user);
   });
 
   it('should return all users', () => {
-    const user01 = { id: 1, email: 'testing@hotmail.com' };
-    const user02 = { id: 2, email: 'testing@hotmail.com' };
+    const user01 = { id: 1, email: 'test@hotmail.com' };
+    const user02 = { id: 2, email: 'test@hotmail.com' };
     service.create(user01);
     service.create(user02);
-
     expect(service.findAll()).toEqual([user01, user02]);
   });
 });
